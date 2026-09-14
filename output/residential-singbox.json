@@ -4,90 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
-      "server": "104.18.0.1",
-      "server_port": 443,
-      "uuid": "3ccba794-1c6d-48a8-acf2-f5caf0e69d86",
-      "tls": {
-        "enabled": true,
-        "server_name": "all.speedtest03.ccwu.cc",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "all.speedtest03.ccwu.cc"
-        }
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe",
       "server": "36.224.152.189",
       "server_port": 50099,
       "method": "chacha20-ietf-poly1305",
-      "password": "b1ae0fce-9340-4f2e-882d-fdb2218e2e2b"
-    },
-    {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 03 (家宽) - xiaohe",
-      "server": "129.151.64.169",
-      "server_port": 31867,
-      "uuid": "bd01efed-f999-41a5-bbb1-3d2357647f11",
-      "tls": {
-        "enabled": true,
-        "server_name": "c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@Marisa_kristi",
-        "headers": {
-          "Host": "c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 04 (家宽) - xiaohe",
-      "server": "hk01.kfc-520.com",
-      "server_port": 60001,
-      "password": "49f7ff21-a176-30cc-ab60-a5988fd85ce0",
-      "tls": {
-        "enabled": true,
-        "server_name": "hk01.kfc-520.com",
-        "insecure": false
-      }
+      "password": "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe",
-        "🇯🇵 日本 (Japan) 03 (家宽) - xiaohe",
-        "🇭🇰 中国香港 (Hong Kong) 04 (家宽) - xiaohe"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe",
-        "🇯🇵 日本 (Japan) 03 (家宽) - xiaohe",
-        "🇭🇰 中国香港 (Hong Kong) 04 (家宽) - xiaohe"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
