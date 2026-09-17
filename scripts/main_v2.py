@@ -63,6 +63,10 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/freefq/free/master/v2",
     "https://open.heleimail.workers.dev/",
     "https://www.ermao.net/sub/v2ray/ermao.net",
+    "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml",
+    "https://gist.githubusercontent.com/shuaidaoya/9e5cf2749c0ce79932dd9229d9b4162b/raw/base64.txt",
+    "https://raw.githubusercontent.com/PuddinCat/BestClash/main/proxies.yaml",
+    "https://www.ermao.net/sub/clash/ermao.net",
 ]
 
 OUTPUT_DIR = "output"
