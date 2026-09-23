@@ -4,23 +4,27 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇦🇪 阿联酋 (UAE) 01 - xiaohe",
-      "server": "31.58.181.88",
-      "server_port": 8443,
-      "uuid": "8a4c1e5d-5180-4026-83e2-0c208428e0a6",
-      "flow": "xtls-rprx-vision",
+      "server": "199.232.78.101",
+      "server_port": 443,
+      "password": "MITIVpN",
       "tls": {
         "enabled": true,
-        "server_name": "tradingview.com",
+        "server_name": "ssl.fastly.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc",
-          "short_id": ""
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "mitivpn---ss--s---mitivpn-11e.global.ssl.fastly.net"
         }
       }
     },
@@ -43,7 +47,7 @@
     {
       "type": "hysteria2",
       "tag": "🇦🇪 阿联酋 (UAE) 03 - xiaohe",
-      "server": "85.204.107.181",
+      "server": "85.204.107.178",
       "server_port": 8080,
       "password": "Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0",
       "tls": {
