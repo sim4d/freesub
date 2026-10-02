@@ -29,19 +29,7 @@ proxies:
   servername: aws.amazon.com
   client-fingerprint: chrome
 - name: 🇮🇩 印尼 (Indonesia) 03 - xiaohe
-  server: 34.128.84.173
-  port: 443
-  udp: true
-  type: vless
-  uuid: e440fa81-fe9d-4ca1-b711-f7b72c3d79ed
-  tls: true
-  reality-opts:
-    public-key: -9nhbWBjFTNIE5q0kg76hjyzCS2giPfZ-fbd8xvmRX0
-    short-id: 409192cee72716d7
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇮🇩 印尼 (Indonesia) 04 - xiaohe
-  server: 188.114.97.6
+  server: 104.18.32.87
   port: 443
   udp: true
   type: trojan
@@ -59,7 +47,6 @@ proxy-groups:
   - 🇮🇩 印尼 (Indonesia) 01 - xiaohe
   - 🇮🇩 印尼 (Indonesia) 02 - xiaohe
   - 🇮🇩 印尼 (Indonesia) 03 - xiaohe
-  - 🇮🇩 印尼 (Indonesia) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -68,6 +55,5 @@ proxy-groups:
   - 🇮🇩 印尼 (Indonesia) 01 - xiaohe
   - 🇮🇩 印尼 (Indonesia) 02 - xiaohe
   - 🇮🇩 印尼 (Indonesia) 03 - xiaohe
-  - 🇮🇩 印尼 (Indonesia) 04 - xiaohe
 rules:
 - MATCH,PROXIES

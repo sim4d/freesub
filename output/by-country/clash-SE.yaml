@@ -12,13 +12,6 @@ proxies:
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 02 - xiaohe
-  server: 13.49.21.155
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 03 - xiaohe
   server: 143.246.196.207
   port: 443
   udp: true
@@ -29,9 +22,16 @@ proxies:
   reality-opts:
     public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
   servername: www.blocket.se
-  client-fingerprint: ''
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 03 - xiaohe
+  server: 13.49.21.155
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 04 - xiaohe
-  server: surstreming.vvzzkontaktezzvv.garden
+  server: 5.157.10.148
   port: 443
   udp: true
   type: vless
