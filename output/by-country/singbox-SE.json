@@ -32,6 +32,7 @@
       "uuid": "33016f3d-8509-493c-bd8b-d26447d48135",
       "transport": {
         "type": "ws",
+        "path": "/",
         "headers": {
           "Host": "stigmata.ir"
         }
