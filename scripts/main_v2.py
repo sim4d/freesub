@@ -1629,7 +1629,14 @@ def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict
 def outbound_to_clash(node: dict, name: str) -> dict:
     """sing-box outbound → Clash (Meta/mihomo) proxy dict"""
     t = node.get("type")
-    server, port = node["server"], node["server_port"]
+    server = node["server"]
+    # Port-hopping node (hy2 mport): no server_port, fall back to first range start
+    if "server_port" in node:
+        port = node["server_port"]
+    elif node.get("server_ports"):
+        port = int(str(node["server_ports"][0]).split(":")[0])
+    else:
+        return None
     proxy = {"name": name, "server": server, "port": port, "udp": True}
 
     if t == "vless":

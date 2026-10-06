@@ -149,6 +149,38 @@ def run_test():
 
     print()
     print("=" * 70)
+    print(f"阶段4: 导出转换器回归 ({len(outbounds)} 个 outbound)")
+    print("=" * 70)
+    # Regression: port-hopping hy2 nodes carry server_ports and NO server_port,
+    # so every converter must tolerate the missing key (CI KeyError on clash export).
+    for name, ob in outbounds.items():
+        results = {}
+        for label, fn in (("V2RAY", mv.outbound_to_v2ray_link),
+                          ("CLASH", mv.outbound_to_clash),
+                          ("SINGBOX", mv.outbound_to_singbox)):
+            try:
+                results[label] = fn(ob, name)
+            except Exception as e:
+                results[label] = None
+                FAIL.append(f"[EXPORT-{label}] {name}: {type(e).__name__}: {e}")
+                print(f"  ❌ {name}: {label} → {type(e).__name__}: {e}")
+        if all(results.values()):
+            print(f"  ✅ {name}: v2ray/clash/singbox 全部导出成功")
+
+        # Port-hopping nodes: clash proxy must map ranges to mihomo "ports"
+        if ob.get("server_ports"):
+            cp = results["CLASH"]
+            if cp:
+                expected_ports = ",".join(p.replace(":", "-") for p in ob["server_ports"])
+                if cp.get("ports") != expected_ports:
+                    FAIL.append(f"[EXPORT-CLASH] {name}: ports 期望 {expected_ports} 实得 {cp.get('ports')}")
+                first_port = int(str(ob["server_ports"][0]).split(":")[0])
+                if cp.get("port") != first_port:
+                    FAIL.append(f"[EXPORT-CLASH] {name}: port 期望 {first_port} 实得 {cp.get('port')}")
+                print(f"     ↳ 端口跳跃: port={cp.get('port')} ports={cp.get('ports')}")
+
+    print()
+    print("=" * 70)
     if FAIL:
         print(f"共 {len(FAIL)} 项失败:")
         for f in FAIL:
