@@ -4,7 +4,17 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇹 奥地利 (Austria) 01 (家宽) - xiaohe
+- name: 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  server: 155.117.19.17
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 5fa748137b6d822308eea4611f474ad5
+  sni: www.bing.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
+- name: 🇦🇹 奥地利 (Austria) 02 (家宽) - xiaohe
   server: 31.77.227.6
   port: 52006
   udp: true
@@ -14,29 +24,30 @@ proxies:
   tls: true
   servername: bigdick.gamegrow.ru
   skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 02 (家宽) - xiaohe
-  server: 54.178.110.17
-  port: 4443
+  client-fingerprint: safari
+- name: 🇯🇵 日本 (Japan) 03 (家宽) - xiaohe
+  server: 188.245.191.19
+  port: 2040
   udp: true
   type: vless
-  uuid: d5fbd83b-7346-4ad9-94c0-76293724824d
+  uuid: 17253e9d-483f-46d1-b425-749b45fee6c6
   tls: true
-  servername: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
+  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /@Marisa_kristi
     headers:
-      Host: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
-- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
+      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+- name: 🇹🇷 土耳其 (Turkey) 04 (移动家宽) - xiaohe
   server: test.keoplentuio.xyz
   port: 2053
   udp: true
   type: vless
   uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
-  server: 172.66.152.4
+- name: 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - xiaohe
+  server: argo6.5671234.xyz
   port: 443
   udp: true
   type: vless
@@ -44,29 +55,49 @@ proxies:
   tls: true
   servername: argo6.5671234.xyz
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /e8e2cecb6188f7fb
-    headers:
-      Host: argo6.5671234.xyz
+- name: 🇸🇬 新加坡 (Singapore) 06 (家宽) - xiaohe
+  server: s3.huhiuh.space
+  port: 18642
+  udp: true
+  type: hysteria2
+  password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - xiaohe
+  server: sbgfgov.vip23.wogacnmnagfwgov.com
+  port: 11223
+  udp: true
+  type: vmess
+  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
+  alterId: 2
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇹 奥地利 (Austria) 01 (家宽) - xiaohe
-  - 🇯🇵 日本 (Japan) 02 (家宽) - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  - 🇦🇹 奥地利 (Austria) 02 (家宽) - xiaohe
+  - 🇯🇵 日本 (Japan) 03 (家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 06 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇹 奥地利 (Austria) 01 (家宽) - xiaohe
-  - 🇯🇵 日本 (Japan) 02 (家宽) - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  - 🇦🇹 奥地利 (Austria) 02 (家宽) - xiaohe
+  - 🇯🇵 日本 (Japan) 03 (家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 06 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 07 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
