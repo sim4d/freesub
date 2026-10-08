@@ -5,14 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - xiaohe
-  server: 194.87.59.27
-  port: 2085
+  server: 95.85.238.173
+  port: 443
   udp: true
-  type: vless
-  uuid: 755d2e25-9b0c-41ae-a27c-bd45318c7a4f
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  type: hysteria2
+  password: c-E0lamG8OnEj9M_uh3oJPmIXqYIVGctO-NHELF1TmNYs7Jl
+  sni: cz.h2.cleanersaz.help
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
